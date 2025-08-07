@@ -1,8 +1,8 @@
-// frontend/src/services/api.js
 import axios from 'axios';
 
+// A URL do backend agora virá de uma variável de ambiente
 const api = axios.create({
-    baseURL: 'http://localhost:3001/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://e-commerce-rastreio.onrender.com',
 });
 
 // Adiciona o token em todas as requisições autenticadas

@@ -19,6 +19,13 @@ const sequelize = new Sequelize({
   logging: false
 });
 
+// Configuração de CORS mais específica para produção
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'https://e-commerce-rastreio.vercel.app/login', // Permite o seu frontend
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
 User.init(sequelize);
 Tracking.init(sequelize);
 User.associate(sequelize.models);
