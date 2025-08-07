@@ -11,21 +11,17 @@ const Tracking = require('./models/Tracking');
 
 const app = express();
 
-// --- CORREÇÃO AQUI ---
-// 1. Removida a primeira chamada app.use(cors())
-// 2. A configuração de CORS agora está no lugar certo, antes das rotas.
+// --- CORREÇÃO DEFINITIVA DE CORS ---
+// Configuração única e robusta para aceitar requisições do seu frontend.
+// Esta configuração deve vir ANTES de qualquer outra rota.
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'https://e-commerce-rastreio.vercel.app'
+}));
 
-// Configuração de CORS mais específica para produção
-const corsOptions = {
-  // 3. Corrigido o 'origin' para não incluir o caminho '/login'
-  origin: process.env.FRONTEND_URL || 'https://e-commerce-rastreio.vercel.app', 
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
-
-// O restante dos middlewares
+// Middlewares para processar o corpo das requisições
 app.use(express.json());
 
+// Banco de Dados
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: './database.sqlite',
@@ -37,6 +33,7 @@ Tracking.init(sequelize);
 User.associate(sequelize.models);
 Tracking.associate(sequelize.models);
 
+// Rotas da API
 app.use('/api/auth', authRoutes);
 app.use('/api/tracking', trackingRoutes);
 
