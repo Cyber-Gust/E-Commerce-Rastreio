@@ -1,0 +1,319 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --danger-color: #dc3545;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #343a40;
+  --text-color: #212529;
+  --white: #fff;
+  --border-color: #dee2e6;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.auth-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.tracking-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tracking-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.2s;
+}
+
+.tracking-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.tracking-item h3 {
+    margin: 0 0 8px 0;
+    color: var(--dark-gray);
+}
+.tracking-item p {
+    margin: 0 0 15px 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.add-tracking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+}
+
+.btn-logout {
+    background-color: var(--danger-color);
+}
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+.btn-status {
+    background-color: #28a745;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+.btn-status:hover {
+    background-color: #218838;
+}
+
+.status-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.status-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.status-modal-content h4 {
+    margin-top: 0;
+}
+
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --danger-color: #dc3545;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #343a40;
+  --text-color: #212529;
+  --white: #fff;
+  --border-color: #dee2e6;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tracking-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tracking-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.add-tracking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-logout { background-color: var(--danger-color); }
+.btn-status { background-color: #28a745; font-size: 14px; padding: 8px 12px; }
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.status-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.status-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.status-event {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.status-event:last-child {
+    border-bottom: none;
+}
